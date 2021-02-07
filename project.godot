@@ -1,0 +1,45 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[ {
+"base": "Node2D",
+"class": "Battle",
+"language": "GDScript",
+"path": "res://Scenes/Battle/Battle.gd"
+}, {
+"base": "Sprite",
+"class": "Character",
+"language": "GDScript",
+"path": "res://Scenes/Character/Character.gd"
+}, {
+"base": "Node2D",
+"class": "Overworld",
+"language": "GDScript",
+"path": "res://Scenes/Overworld/Overworld.gd"
+} ]
+_global_script_class_icons={
+"Battle": "",
+"Character": "",
+"Overworld": ""
+}
+
+[application]
+
+config/name="Scene Switching Example"
+run/main_scene="res://Scenes/Overworld/Overworld.tscn"
+config/icon="res://icon.png"
+
+[autoload]
+
+G="*res://Singletons/G.gd"
+
+[rendering]
+
+environment/default_environment="res://default_env.tres"
